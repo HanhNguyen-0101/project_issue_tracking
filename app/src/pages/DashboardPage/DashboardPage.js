@@ -32,7 +32,7 @@ export default function DashboardPage(props) {
             dangerouslySetInnerHTML={{ __html: projectDetail?.description }}
           ></span>
         </div>
-        <InfoMainJiraComponent id={id}/>
+        <InfoMainJiraComponent/>
         <ContentMainJiraComponent />
       </div>
     );

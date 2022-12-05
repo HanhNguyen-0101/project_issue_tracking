@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { setSubmitDrawer } from "../../../redux/actions/DrawerAction";
@@ -11,7 +11,10 @@ import {
   getAllPriority,
   getAllTypeTask,
 } from "../../../redux/actions/IssueAction";
-import { priorityIcon, taskTypeDetailIcon } from "../../../utils/render/taskUtil";
+import {
+  priorityIcon,
+  taskTypeDetailIcon,
+} from "../../../utils/render/taskUtil";
 const { Option } = AutoComplete;
 
 function FormCreateIssue(props) {
@@ -69,8 +72,9 @@ function FormCreateIssue(props) {
                 className="w-100"
                 placeholder="Select..."
                 name="projectId"
+                disabled={true}
                 onChange={(value) => {
-                  setFieldValue('projectId', value);
+                  setFieldValue("projectId", value);
                 }}
                 value={values.projectId}
               >
@@ -109,25 +113,25 @@ function FormCreateIssue(props) {
                 Priority <span style={{ color: "red" }}>*</span>
               </label>
               <Select
-                  showArrow
-                  value={values.priorityId}
-                  name="priorityId"
-                  onChange={(value) => {
-                    setFieldValue('priorityId', value);
-                  }}
-                  id="priorityId"
-                  placeholder="Select..."
-                  className="w-100"
-                >
-                  {priorities?.map((priority, idx) => (
-                    <Option key={idx} value={priority.priorityId}>
-                      <Space>
-                        {priorityIcon(priority.priorityId)}
-                        <span>{priority.priority}</span>
-                      </Space>
-                    </Option>
-                  ))}
-                </Select>
+                showArrow
+                value={values.priorityId}
+                name="priorityId"
+                onChange={(value) => {
+                  setFieldValue("priorityId", value);
+                }}
+                id="priorityId"
+                placeholder="Select..."
+                className="w-100"
+              >
+                {priorities?.map((priority, idx) => (
+                  <Option key={idx} value={priority.priorityId}>
+                    <Space>
+                      {priorityIcon(priority.priorityId)}
+                      <span>{priority.priority}</span>
+                    </Space>
+                  </Option>
+                ))}
+              </Select>
             </div>
           </div>
           <div className="col-3">
@@ -136,25 +140,28 @@ function FormCreateIssue(props) {
                 Task Type <span style={{ color: "red" }}>*</span>
               </label>
               <Select
-                  showArrow
-                  value={values.typeId}
-                  name="typeId"
-                  onChange={(value) => {
-                    setFieldValue('typeId', value);
-                  }}
-                  id="typeId"
-                  placeholder="Select..."
-                  className="w-100"
-                >
-                  {typeTasks?.map((type, idx) => (
-                    <Option key={idx} value={type.id}>
-                      <Space>
-                        {taskTypeDetailIcon(type.id)}
-                        <span>{type.taskType.charAt(0).toUpperCase() + type.taskType.slice(1)}</span>
-                      </Space>
-                    </Option>
-                  ))}
-                </Select>
+                showArrow
+                value={values.typeId}
+                name="typeId"
+                onChange={(value) => {
+                  setFieldValue("typeId", value);
+                }}
+                id="typeId"
+                placeholder="Select..."
+                className="w-100"
+              >
+                {typeTasks?.map((type, idx) => (
+                  <Option key={idx} value={type.id}>
+                    <Space>
+                      {taskTypeDetailIcon(type.id)}
+                      <span>
+                        {type.taskType.charAt(0).toUpperCase() +
+                          type.taskType.slice(1)}
+                      </span>
+                    </Space>
+                  </Option>
+                ))}
+              </Select>
             </div>
           </div>
           <div className="col-6">
@@ -168,7 +175,7 @@ function FormCreateIssue(props) {
                 placeholder="Select..."
                 name="statusId"
                 onChange={(value) => {
-                  setFieldValue('statusId', value);
+                  setFieldValue("statusId", value);
                 }}
                 value={values.statusId}
               >
@@ -308,7 +315,7 @@ const FormCreateIssueWithFormik = withFormik({
     originalEstimate: 0,
     timeTrackingSpent: 0,
     timeTrackingRemaining: 0,
-    projectId: projects[0]?.id,
+    projectId: projectDetail?.id,
     typeId: typeTasks[0]?.id,
     priorityId: priorities[0]?.priorityId,
   }),
@@ -325,8 +332,8 @@ const FormCreateIssueWithFormik = withFormik({
       projectId: Number(values.projectId),
       timeTrackingRemaining: Number(values.timeTrackingRemaining),
       timeTrackingSpent: Number(values.timeTrackingSpent),
-      typeId: Number(values.typeId)
-    }
+      typeId: Number(values.typeId),
+    };
     props.dispatch(createIssueDetail(issue));
   },
 

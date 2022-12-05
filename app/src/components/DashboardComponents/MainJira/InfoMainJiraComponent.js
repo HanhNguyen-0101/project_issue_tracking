@@ -7,9 +7,11 @@ import { PlusOutlined } from "@ant-design/icons";
 import { Button } from "antd";
 import { setContentDrawer } from "../../../redux/actions/DrawerAction";
 import { getProjectDetailApi } from "../../../redux/actions/ProjectAction";
+import { useParams } from "react-router-dom";
 
-export default function InfoMainJiraComponent({ id }) {
+export default function InfoMainJiraComponent() {
   const { projectDetail } = useSelector((state) => state.ProjectReducer);
+  const { id } = useParams();
   const dispatch = useDispatch();
   const renderMember = () => {
     return (

@@ -17,7 +17,10 @@ import {
   REMOVE_USER_FROM_PROJECT_SAGA,
 } from "../constants/ProjectConstant";
 import { history } from "../../utils/history/history";
-import { NOTIF_TYPE, openNotification } from "../../utils/notification/notification";
+import {
+  NOTIF_TYPE,
+  openNotification,
+} from "../../utils/notification/notification";
 import { HIDE_DRAWER } from "../constants/DrawerConstant";
 
 /******************************************************************/
@@ -36,7 +39,7 @@ function* getAllCategorySaga() {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
   } catch (error) {
-    openNotification(NOTIF_TYPE.ERROR, '', error);
+    openNotification(NOTIF_TYPE.ERROR, "", error);
   }
   yield put({
     type: HIDE_LOADING,
@@ -64,7 +67,7 @@ function* createProjectSaga({ project }) {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
   } catch (error) {
-    openNotification(NOTIF_TYPE.ERROR, '', error);
+    openNotification(NOTIF_TYPE.ERROR, "", error);
   }
   yield put({ type: HIDE_LOADING });
 }
@@ -77,17 +80,17 @@ export function* followCreateProjectSaga() {
 export function* getAllProjectSaga() {
   yield put({ type: SHOW_LOADING });
   try {
-    const {data, status} = yield call(() => ProjectService.getAllProject());
+    const { data, status } = yield call(() => ProjectService.getAllProject());
     if (status === STATUS_CODE.SUCCESS) {
       yield put({
         type: GET_ALL_PROJECT,
-        payload: {projects: data.content}
+        payload: { projects: data.content },
       });
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
   } catch (error) {
-    openNotification(NOTIF_TYPE.ERROR, '', error);
+    openNotification(NOTIF_TYPE.ERROR, "", error);
   }
   yield put({ type: HIDE_LOADING });
 }
@@ -97,17 +100,23 @@ export function* followGetAllProjectSaga() {
 }
 
 /******************************************************************/
-export function* assignUserToProjectSaga({obj}) {
+export function* assignUserToProjectSaga({ obj }) {
   try {
-    const {data, status} = yield call(() => ProjectService.assignUserToProject(obj));
+    const { data, status } = yield call(() =>
+      ProjectService.assignUserToProject(obj)
+    );
     if (status === STATUS_CODE.SUCCESS) {
       yield call(getAllProjectSaga);
-      openNotification(NOTIF_TYPE.SUCCESS, '', 'Assign the member has successed!');
+      openNotification(
+        NOTIF_TYPE.SUCCESS,
+        "",
+        "Assign the member has successed!"
+      );
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
   } catch (error) {
-    openNotification(NOTIF_TYPE.ERROR, '', error);
+    openNotification(NOTIF_TYPE.ERROR, "", error);
   }
 }
 
@@ -116,17 +125,23 @@ export function* followAssignUserToProjectSaga() {
 }
 
 /******************************************************************/
-export function* removeUserFromProjectSaga({obj}) {
+export function* removeUserFromProjectSaga({ obj }) {
   try {
-    const {data, status} = yield call(() => ProjectService.removeUserFromProject(obj));
+    const { data, status } = yield call(() =>
+      ProjectService.removeUserFromProject(obj)
+    );
     if (status === STATUS_CODE.SUCCESS) {
       yield call(getAllProjectSaga);
-      openNotification(NOTIF_TYPE.SUCCESS, '', 'Remove the member has successed!');
+      openNotification(
+        NOTIF_TYPE.SUCCESS,
+        "",
+        "Remove the member has successed!"
+      );
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
   } catch (error) {
-    openNotification(NOTIF_TYPE.ERROR, '', error);
+    openNotification(NOTIF_TYPE.ERROR, "", error);
   }
 }
 
@@ -145,7 +160,7 @@ function* editProjectDetailSaga({ payload }) {
     );
     if (status === STATUS_CODE.SUCCESS) {
       yield call(getAllProjectSaga);
-      openNotification(NOTIF_TYPE.SUCCESS, '', 'Edit project has successed!');
+      openNotification(NOTIF_TYPE.SUCCESS, "", "Edit project has successed!");
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
@@ -173,7 +188,7 @@ function* deleteProjectDetailSaga({ payload }) {
     );
     if (status === STATUS_CODE.SUCCESS) {
       yield call(getAllProjectSaga);
-      openNotification(NOTIF_TYPE.SUCCESS, '', 'Delete project has successed!');
+      openNotification(NOTIF_TYPE.SUCCESS, "", "Delete project has successed!");
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
@@ -197,8 +212,8 @@ export function* getProjectDetailApi({ projectId }) {
     if (status === STATUS_CODE.SUCCESS) {
       yield put({
         type: GET_PROJECT_DETAIL_API,
-        payload: {project: data.content}
-      })
+        payload: { project: data.content },
+      });
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
