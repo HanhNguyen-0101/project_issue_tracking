@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { connect, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { withFormik } from "formik";
 import * as Yup from "yup";
 import { setSubmitDrawer } from "../../../redux/actions/DrawerAction";
