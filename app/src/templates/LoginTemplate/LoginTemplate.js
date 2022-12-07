@@ -24,7 +24,7 @@ const LoginTemplate = ({ Component, ...restParams }) => {
     <Route
       {...restParams}
       render={(propsRoute) => (
-        <>
+        <div className="tracking">
           <LoadingComponent />
           <Layout className="flex-row">
             <Sider
@@ -41,7 +41,7 @@ const LoginTemplate = ({ Component, ...restParams }) => {
               </div>
             </Content>
           </Layout>
-        </>
+        </div>
       )}
     />
   );

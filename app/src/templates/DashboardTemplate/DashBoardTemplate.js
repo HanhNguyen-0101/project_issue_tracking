@@ -15,13 +15,13 @@ export default function DashBoardTemplate({ Component, ...restParams }) {
       {...restParams}
       render={(propsRoute) => {
         return (
-          <>
+          <div className="tracking">
             <LoadingComponent />
             <div className="jira">
               <MenuJiraComponent />
               <Component {...propsRoute} />
             </div>
-          </>
+          </div>
         );
       }}
     />

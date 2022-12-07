@@ -7,7 +7,7 @@ export default function ModalHOC() {
   );
   return (
     <div
-      className="modal fade"
+      className="modal fade tracking"
       id="infoModal"
       tabIndex={-1}
       role="dialog"

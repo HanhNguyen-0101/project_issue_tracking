@@ -1,19 +1,19 @@
-.jira {
+.tracking .jira {
   min-height: 100vh;
   height: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   display: flex;
 }
-.ant-btn-primary:focus, .ant-btn-primary:hover, .ant-btn-primary {
+.tracking .ant-btn-primary:focus, .tracking .ant-btn-primary:hover, .tracking .ant-btn-primary {
   background-color: #065fd4;
   border-color: #065fd4;
 }
-a, .primary {
+.tracking a, .tracking .primary {
   color: #065fd4;
 }
 /* Sider Bar */
-.sideBar {
+.tracking .sideBar {
   position: fixed;
   height: 100vh;
   z-index: 10;
@@ -22,120 +22,120 @@ a, .primary {
   transition: 0.2s;
 }
 
-.sideBar:hover {
+.tracking .sideBar:hover {
   width: 15%;
 }
 
-.sideBar:hover .sideBar-top .sideBar-icon:first-child {
+.tracking .sideBar:hover .sideBar-top .sideBar-icon:first-child {
   padding: 0 40%;
 }
 
-.sideBar:hover .sideBar-top .sideBar-icon:not(:first-child) {
+.tracking .sideBar:hover .sideBar-top .sideBar-icon:not(:first-child) {
   padding: 0;
   padding-left: 5%;
 }
 
-.sideBar:hover .sideBar-top .sideBar-icon:not(:first-child) .title {
+.tracking .sideBar:hover .sideBar-top .sideBar-icon:not(:first-child) .title {
   opacity: 1;
   color: white;
   font-weight: 500;
 }
 
-.sideBar:hover .sideBar-top .sideBar-icon:not(:first-child) .svg-inline--fa {
+.tracking .sideBar:hover .sideBar-top .sideBar-icon:not(:first-child) .svg-inline--fa {
   margin-right: 10px;
 }
 
-.sideBar:hover .sideBar-bottom {
+.tracking .sideBar:hover .sideBar-bottom {
   left: 0%;
   width: 100%;
 }
 
-.sideBar:hover .sideBar-bottom .svg-inline--fa {
+.tracking .sideBar:hover .sideBar-bottom .svg-inline--fa {
   margin-right: 10px;
 }
 
-.sideBar:hover .sideBar-bottom .title {
+.tracking .sideBar:hover .sideBar-bottom .title {
   opacity: 1;
   color: white;
   font-weight: 500;
 }
 
-.sideBar .sideBar-icon {
+.tracking .sideBar .sideBar-icon {
   margin-bottom: 20%;
 }
 
-.sideBar .sideBar-icon .svg-inline--fa {
+.tracking .sideBar .sideBar-icon .svg-inline--fa {
   color: white;
 }
 
-.sideBar .sideBar-icon .title {
+.tracking .sideBar .sideBar-icon .title {
   opacity: 0;
 }
 
-.sideBar .sideBar-top .sideBar-icon:first-child {
+.tracking .sideBar .sideBar-top .sideBar-icon:first-child {
   padding-top: 20%;
   font-size: 25px;
 }
 
-.sideBar .sideBar-bottom {
+.tracking .sideBar .sideBar-bottom {
   position: absolute;
   bottom: 3%;
   left: 8%;
 }
 
-.sideBar .sideBar-icon {
+.tracking .sideBar .sideBar-icon {
   padding: 0 18%;
 }
 
-.sideBar .sideBar-icon:not(:first-child) {
+.tracking .sideBar .sideBar-icon:not(:first-child) {
   padding: 0 30%;
   height: 30px;
 }
-.modal {
+.tracking .modal {
   z-index: 1020;
 }
-.modal-backdrop {
+.tracking .modal-backdrop {
   z-index: 1010;
 }
 /* Menu */
-.menu {
+.tracking .menu {
   min-height: 100vh;
   min-width: 270px;
   background-color: #0052cc;
 }
 
-.menu .account {
+.tracking .menu .account {
   display: flex;
   padding: 5% 17%;
   margin-bottom: 5%;
 }
 
-.menu .account .avatar {
+.tracking .menu .account .avatar {
   padding-top: 13%;
   margin-right: 10px;
 }
 
-.avatar img {
+.tracking .avatar img {
   width: 50px;
 }
 
-.menu .account .account-info {
+.tracking .menu .account .account-info {
   padding-top: 12%;
   padding-bottom: 5%;
   text-align: left;
 }
 
-.menu .account .account-info p:first-child {
+.tracking .menu .account .account-info p:first-child {
   margin-bottom: 3px;
   font-weight: 500;
 }
 
-.menu .account .account-info p:last-child {
+.tracking .menu .account .account-info p:last-child {
   margin-top: 0px;
   font-weight: 300;
 }
 
-.menu .control {
+.tracking .menu .control {
   padding: 0% 10%;
   text-align: left;
   margin-bottom: 8%;
@@ -143,25 +143,25 @@ a, .primary {
   margin-right: 7%;
 }
 
-.menu .control div {
+.tracking .menu .control div {
   margin-bottom: 10px;
   padding: 2% 3%;
   cursor: pointer;
 }
 
-.menu .control div span:first-child {
+.tracking .menu .control div span:first-child {
   margin-right: 10px;
 }
 
-.menu .control div span:first-child:focus {
+.tracking .menu .control div span:first-child:focus {
   background-color: #ebecf0;
 }
 
-.menu .control div:focus {
+.tracking .menu .control div:focus {
   color: royalblue;
 }
 
-.menu .feature {
+.tracking .menu .feature {
   padding: 0% 10%;
   text-align: left;
   margin-bottom: 8%;
@@ -169,37 +169,37 @@ a, .primary {
   margin-right: 7%;
 }
 
-.menu .feature div {
+.tracking .menu .feature div {
   margin-bottom: 5px;
   padding: 2% 3%;
   cursor: pointer;
 }
 
-.menu .feature div .svg-inline--fa {
+.tracking .menu .feature div .svg-inline--fa {
   margin-right: 5px;
 }
 
-.menu .feature div span {
+.tracking .menu .feature div span {
   font-size: 14px;
 }
 
-.main {
+.tracking .main {
   padding-left: 2%;
 }
-.main .header .breadcrumb {
+.tracking .main .header .breadcrumb {
   margin-bottom: 0;
   padding-left: 0px;
 }
 
-.main h3 {
+.tracking .main h3 {
   margin-bottom: 20px;
 }
 
-.main .info .search-block {
+.tracking .main .info .search-block {
   position: relative;
 }
 
-.main .info .search-block .search {
+.tracking .main .info .search-block .search {
   height: 32px;
   width: 200px;
   background-color: rgb(250, 251, 252);
@@ -208,108 +208,113 @@ a, .primary {
   padding-left: 32px;
 }
 
-.main .info .search-block .fa-search {
+.tracking .main .info .search-block .fa-search {
   position: absolute;
   left: 5%;
   top: 15%;
   color: #67748b;
 }
-
-.main .info .avatar-group {
+.tracking .ant-btn-danger {
+  background: #ff4d4f !important;
+}
+.tracking .ant-btn-primary {
+  background: #1890ff !important;
+}
+.tracking .main .info .avatar-group {
   margin-left: 20px;
 }
 
-.avatar-group .avatar img {
+.tracking .avatar-group .avatar img {
   width: 40px;
   border: 1px solid transparent;
   height: 40px;
   border-radius: 50%;
 }
 
-.avatar img {
+.tracking .avatar img {
   width: 40px;
   border: 1px solid transparent;
   height: 40px;
   border-radius: 50%;
 }
 
-.main .info .text {
+.tracking .main .info .text {
   text-align: center;
   line-height: 35px;
 }
 
-.main .content {
+.tracking .main .content {
   margin-top: 20px;
 }
 
-.main .content .card {
+.tracking .main .content .card {
   margin-right: 10px;
   background-color: #f4f5f7;
 }
 
-.main .content .card .card-header {
+.tracking .main .content .card .card-header {
   border: none;
   background-color: transparent;
   color: #5e6c84;
 }
 
-.main .content .card .list-group {
+.tracking .main .content .card .list-group {
   border: none;
 }
 
-.main .content .card .list-group .list-group-item {
+.tracking .main .content .card .list-group .list-group-item {
   margin: 5px;
 }
 
-.list-group-item p {
+.tracking .list-group-item p {
   font-size: 14px;
 }
 
-.list-group-item .block {
+.tracking .list-group-item .block {
   justify-content: space-between;
 }
 
-.list-group-item .block .block-left {
+.tracking .list-group-item .block .block-left {
   line-height: 40px;
 }
 
-.list-group-item .block .block-left .svg-inline--fa {
+.tracking .list-group-item .block .block-left .svg-inline--fa {
   margin-right: 5px;
 }
 
-.fa-bookmark {
+.tracking .fa-bookmark {
   color: #5fb03e;
 }
 
-.fa-arrow-up {
+.tracking .fa-arrow-up {
   color: #d85463;
 }
 
-.fa-check-square {
+.tracking .fa-check-square {
   color: #62a0ce;
 }
 
 /* Modal */
-.modal-search {
+.tracking .modal-search {
   margin: 0px !important;
 }
 
-.modal-search .modal-content {
+.tracking .modal-search .modal-content {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
   height: 100vh;
 }
 
-.modal-search .modal-content .modal-header {
+.tracking .modal-search .modal-content .modal-header {
   border-bottom: none;
 }
 
-.modal-search .modal-content .modal-header .search-block {
+.tracking .modal-search .modal-content .modal-header .search-block {
   position: relative;
   width: 100%;
 }
 
-.modal-search .modal-content .modal-header .search-block .search {
+.tracking .modal-search .modal-content .modal-header .search-block .search {
   height: 32px;
   border: none;
   border-bottom: 2px solid #7094ce;
@@ -317,100 +322,100 @@ a, .primary {
   width: 100%;
 }
 
-.modal-search .modal-content .modal-header .search-block .fa-search {
+.tracking .modal-search .modal-content .modal-header .search-block .fa-search {
   position: absolute;
   left: 5%;
   top: 15%;
   color: #67748b;
 }
 
-.modal-search .modal-body div {
+.tracking .modal-search .modal-body div {
   height: 50px;
 }
 
-.modal-search .modal-body div .icon {
+.tracking .modal-search .modal-body div .icon {
   padding: 3% 0px;
   margin-right: 15px;
 }
 
-.modal-search .modal-body div div p {
+.tracking .modal-search .modal-body div div p {
   margin: 0;
   font-size: 16px;
 }
 
-.modal-search .modal-body div div p:last-child {
+.tracking .modal-search .modal-body div div p:last-child {
   color: grey;
 }
 
 /* Modal Info */
-.modal-info {
+.tracking .modal-info {
   max-width: 1000px !important;
 }
 
-.modal-info .modal-content {
+.tracking .modal-info .modal-content {
   padding: 20px 24px;
 }
 
-.modal-info .modal-content .modal-header {
+.tracking .modal-info .modal-content .modal-header {
   padding: 1rem 2rem;
   border-bottom: none;
 }
 
-.task-title span {
+.tracking .task-title span {
   margin-left: 10px;
 }
 
-.task-click div span {
+.tracking .task-click div span {
   padding-right: 20xp;
 }
 
-.fa-trash-alt {
+.tracking .fa-trash-alt {
   width: 20px !important;
   height: 20px;
 }
 
-.task-click .close {
+.tracking .task-click .close {
   padding-bottom: 16px !important;
 }
 
-.modal-info .modal-body .issue {
+.tracking .modal-info .modal-body .issue {
   font-size: 20px;
   font-weight: 500;
 }
 
-.modal-info .modal-body .description p:first-child {
+.tracking .modal-info .modal-body .description p:first-child {
   margin-bottom: 5px;
 }
 
-.input-comment {
+.tracking .input-comment {
   width: 100%;
 }
 
-.input-comment input {
+.tracking .input-comment input {
   width: 100%;
   height: 45px;
   padding: 10px;
 }
 
-.block-comment .avatar {
+.tracking .block-comment .avatar {
   margin-right: 15px;
 }
 
-.display-comment .avatar {
+.tracking .display-comment .avatar {
   margin-right: 15px;
 }
 
-.col-4 h6 {
+.tracking .col-4 h6 {
   font-size: 13px;
 }
 
-.status .custom-select {
+.tracking .status .custom-select {
   height: 35px;
   background: #dcdfe4;
   margin-bottom: 20px;
 }
 
-.item {
+.tracking .item {
   margin-right: 20px;
   background: #e9eaf0;
   padding: 5px;
@@ -418,24 +423,24 @@ a, .primary {
   flex-basis: 50%;
 }
 
-.item .avatar img {
+.tracking .item .avatar img {
   width: 30px;
   height: 30px;
 }
 
-.item .name {
+.tracking .item .name {
   margin: 0;
 }
 
-.reporter .item {
+.tracking .reporter .item {
   width: fit-content;
 }
 
-.reporter {
+.tracking .reporter {
   margin-bottom: 20px;
 }
 
-.estimate-hours {
+.tracking .estimate-hours {
   height: 35px;
   background: #F2F3F7;
   margin-bottom: 20px;
@@ -445,44 +450,44 @@ a, .primary {
   padding: 8px;
 }
 
-.estimate-hours:focus{
+.tracking .estimate-hours:focus{
   background: white;
 }
 
-.time-tracking{
+.tracking .time-tracking{
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
 
-.time-tracking h6{
+.tracking .time-tracking h6{
   font-size: 12px;
 }
 
-.fa-clock{
+.tracking .fa-clock{
   margin-right: 10px;
 }
 
-.progress{
+.tracking .progress{
   height: 5px!important;
   width: 100%;
 }
 
-.logged, .estimate-time{
+.tracking .logged, .tracking .estimate-time{
   font-size: 14px;
 }
-#components-form-demo-normal-login .login-form {
+.tracking #components-form-demo-normal-login .login-form {
   max-width: 300px;
 }
-#components-form-demo-normal-login .login-form-forgot {
+.tracking #components-form-demo-normal-login .login-form-forgot {
   float: right;
 }
-#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+.tracking #components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
   float: left;
 }
-#components-form-demo-normal-login .login-form-button {
+.tracking #components-form-demo-normal-login .login-form-button {
   width: 100%;
 }
-.loading {
+.tracking .loading {
   position: fixed;
   width: 100vw;
   height: 100vh;

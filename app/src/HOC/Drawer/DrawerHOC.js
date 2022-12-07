@@ -14,6 +14,7 @@ export default function DrawerHOC() {
   return (
     <Drawer
       title={title}
+      className="tracking"
       placement="right"
       visible={visible}
       closable={false}
