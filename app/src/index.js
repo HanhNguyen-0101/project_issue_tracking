@@ -1,21 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
-import 'antd/dist/antd.min.css';
+import "antd/dist/antd.min.css";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./redux/configStore";
-import { Router } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { history } from "./utils/history/history";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Router history={history}>
-    <Provider store={store}>
+  <Provider store={store}>
+    <HashRouter history={history}>
       <App />
-    </Provider>
-  </Router>
+    </HashRouter>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
