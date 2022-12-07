@@ -62,7 +62,8 @@ function* createProjectSaga({ project }) {
         type: CREATE_PROJECT,
         payload: { project: data.content },
       });
-      history.push("/management-project");
+      yield history.push("/management-project");
+      yield window.location.reload();
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }

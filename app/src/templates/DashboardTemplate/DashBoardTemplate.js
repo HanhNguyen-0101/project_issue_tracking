@@ -7,7 +7,8 @@ import { history } from "../../utils/history/history";
 
 export default function DashBoardTemplate({ Component, ...restParams }) {
   if (!localStorage.getItem(USER_LOGIN_STORE)) {
-    history.push("/");
+    history.push("/login");
+    window.location.reload();
     return;
   }
   return (

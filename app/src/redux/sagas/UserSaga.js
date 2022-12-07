@@ -44,7 +44,8 @@ function* userLoginSaga({ user }) {
         type: USER_LOGIN,
         payload: { user: data.content },
       });
-      history.push("/management-project");
+      yield history.push("/management-project");
+      yield window.location.reload();
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
@@ -215,7 +216,8 @@ function* registerUserSaga({ user }) {
     const { data, status } = yield call(() => UserService.registerUser(user));
     if (status === STATUS_CODE.SUCCESS) {
       openNotification(NOTIF_TYPE.SUCCESS, 'Create Account successful!', 'Please login this one');
-      history.push("/");
+      yield history.push("/login");
+      yield window.location.reload();
     } else {
       openNotification(NOTIF_TYPE.ERROR, data.message, data.content);
     }
