@@ -1,7 +1,12 @@
 {
-  "name": "my-react-app",
+  "name": "project_issue_tracking",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Alice Nguyen",
+    "email": "hanhnguyen.learning@gmail.com"
+  },
+  "homepage": "https://HanhNguyen-0101.github.io/project_issue_tracking/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -27,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
